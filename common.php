@@ -636,10 +636,10 @@ function proxy_replace_domain($url, $domainforproxy, &$header) {
     //return $aim . '/' . $uri;
     if (strpos($url, '?') > 0) $sp = '&';
     else $sp = '?';
-    $aim .= '/' . $uri . $sp . 'Origindomain=' . $domain;
+    $aim .= '/' . $uri;
     if ($drive->show_base_class() == 'Aliyundrive') $aim .= '&Aliyundrive';
     $header['Location'] = $aim;
-    return $aim . '/' . $uri . $sp . 'Origindomain=' . $domain;
+    return $aim . '/' . $uri;
 }
 
 function bchexdec($hex) {
